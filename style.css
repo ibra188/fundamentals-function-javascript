@@ -10,34 +10,10 @@ html{
 *, *::before, *::after{
     box-sizing: border-box;
 }
-section{
-    margin: 1rem 20px 1rem 1rem;
-    border: 1px solid rgb(180, 173, 173);
-    background-color: black;
-    color: white;
-    font-size: 1rem;
-    padding: 0 20px;
-    width: 100%;
-    height: auto;
-}
-section #demo{
-    padding: 20px;
-}
-section p ul{
-    text-decoration: none;
-    list-style: none;
-}
-section button{
-    margin: 1rem;
-    font-size: 1rem;
-    padding: 1rem;
-    background-color: blue;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-button:hover{
-    background-color: burlywood;
-    color: black;
-}
+ h1{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-top: 10px;
+     
+ }
