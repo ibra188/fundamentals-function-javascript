@@ -54,3 +54,63 @@ function creteFunction(){
 }
 const generatedFunc = createFunction();
 const result = generatedFunc(3);
+
+/*function createFunction(){
+    function multiplyBy2(num){
+        return num*2;
+    }
+    return multiplyBy2;
+}
+
+const generatedFunc = createFunction();
+const result = generatedFunc(3); */
+
+
+//Calling a function in the same function call as it was defined
+function out(){
+    let counter = 0;
+    function incrementCounter(){
+        counter ++;
+    }
+    incrementCounter();
+}
+
+outer();
+
+//calling a function outside of the function call in which it was defined
+function outer (){
+    let counter = 0;
+    function incrementCounter(){counter ++}
+    return incrementCounter;
+
+}
+const myNewFunction = outer();
+myNewFunction();
+myNewFunction();
+
+//introuction callback functions and web browser
+function printHello(){console.log("Hello");}
+setTimeout(printHello, 1000);
+console.log("Me first!");
+
+/*we are interacting with a qorld outside of javascript
+ now so we need rules */
+ function printHello(){console.log("Hello");}
+ function blockFor1Sec(){/*block the javascript thread for 1 sec*/}
+
+ setTimeout(printHello,0);
+
+ blockFor1Sec()
+ console.log("Me first");
+
+ //ES6 Promises
+function display(data){
+    console.log(data)
+}
+
+const futureData = fetch('https://twitter.com')
+futureData.then(display);
+
+console.log("Me first");
+
+
