@@ -53,7 +53,7 @@ function creteFunction(){
     return multiplyBy2;
 }
 const generatedFunc = createFunction();
-const result = generatedFunc(3);
+const result2 = generatedFunc(3);
 
 /*function createFunction(){
     function multiplyBy2(num){
@@ -114,3 +114,58 @@ futureData.then(display);
 console.log("Me first");
 
 
+function display(data){console.log(data)}
+function printHello(){console.log("Hello");}
+function blockFor300ms(){/* blocks js threat for 300} ms */}
+
+setTimeout(printHello, 0);
+
+const futureData1 = fetch('https://twitter.com/will/tweets/1')
+
+futureData1.then(display)
+
+blockFor300ms()
+console.log("Me first");
+
+//Class and  prptotypes
+const user1 = {
+    name: "will",
+    score: 3,
+    increment: function(){user1.score;}
+};
+
+user1.increment();// user1.score -> 4
+
+//dot notaion
+const user2 = {};// create a empty object
+
+//assign property to that object
+user2.name = "Tim";
+user2.score = 6;
+user2.increment = function(){
+    user2.score++;
+};
+
+//creating user3 using object.create
+const user3 = object.create(null);
+
+user3.name = "eva";
+user3.score = 9;
+user3.increment = function(){
+    user3.score++;
+};
+
+//solution1. Generate object using a function
+function userCreator(name, score){
+    const newUser = {};
+    newUser.name = name;
+    newUser.score = score;
+    newUser.increment = function(){
+        newUser.score++;
+    };
+    return newUser;
+};
+
+const user4 = userCreator("will", 3);
+const user5 = userCreator("Tim", 5);
+user4.increment();
