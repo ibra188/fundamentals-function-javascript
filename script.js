@@ -169,3 +169,21 @@ function userCreator(name, score){
 const user4 = userCreator("will", 3);
 const user5 = userCreator("Tim", 5);
 user4.increment();
+
+
+//using the prototype change
+function userCreator2  (name1, score1){
+   const newUser1 = Object.create(userFunctionStore);
+   newUser1.name1 = name1;
+   newUser1.score1 =  score1;
+   return newUser1;
+};
+
+const userFunctionStore = {
+    increment: function(){this.score1++;},
+    login: function(){console.log("Logged in");}
+};
+
+const user6 = userCreator3("will", 3);
+const user7 = userCreator4("Tim", 5);
+user6.increment();
