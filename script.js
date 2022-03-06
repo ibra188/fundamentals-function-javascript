@@ -187,3 +187,4 @@ const userFunctionStore = {
 const user6 = userCreator3("will", 3);
 const user7 = userCreator4("Tim", 5);
 user6.increment();
+
